@@ -1,3 +1,1 @@
-# Mitchell's Custom Enchantment Mod!  
-
-    Code block right here.
+# Mitchell's Custom Enchantment Mod!
