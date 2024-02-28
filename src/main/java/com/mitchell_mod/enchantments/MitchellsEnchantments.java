@@ -2,6 +2,10 @@ package com.mitchell_mod.enchantments;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +15,7 @@ public class MitchellsEnchantments implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final String MOD_ID = "mitchell_enchantments";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static Enchantment WISDOM = new WisdomEnchantment();
 
 	@Override
 	public void onInitialize() {
@@ -19,5 +24,6 @@ public class MitchellsEnchantments implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+		Registry.register(Registries.ENCHANTMENT, new Identifier("mitchell", "wisdom"), WISDOM);
 	}
 }
