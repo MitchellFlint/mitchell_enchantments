@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "mitchell_enchantments",
+	"version": "${version}",
+	"name": "Mitchell's Enchantments",
+	"description": "This is a custom enchantment mod.",
+	"authors": [
+		"Mitchell Flint"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mitchell_enchantments/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.mitchell_mod.enchantments.MitchellsEnchantments"
+		],
+		"client": [
+			"com.mitchell_mod.enchantments.MitchellsEnchantmentsClient"
+		],
+		"fabric-datagen": [
+			"com.mitchell_mod.enchantments.MitchellsEnchantmentsDataGenerator"
+		]
+	},
+	"mixins": [
+		"mitchell_enchantments.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
